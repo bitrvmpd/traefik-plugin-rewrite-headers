@@ -1,0 +1,15 @@
+displayName: Rewrite Headers
+summary: Rewrites the HTTP request or response headers by replacing a search regex by a replacement string.
+type: middleware
+import: github.com/bitrvmpd/traefik-plugin-rewrite-headers
+compatibility: TODO
+testData:
+  rewrites:
+    request:
+      - header: Location
+        regex: "^http://(.+)$"
+        replacement: "https://$1"
+    response:
+      - header: Location
+        regex: "^http://(.+)$"
+        replacement: "https://$1"
